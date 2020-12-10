@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+  <title>Prediction</title>
+  <link rel="stylesheet" href="/static/css/main.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>
+      <center>Predictions</center>
+    </h1>
+
+    {% block content %}
+    <div class="flash">{{win_prob}}</div>
+
+    <div class="flash">{{score}}</div>
+
+    <form action="/button" method = "POST">
+    <p><input type = "submit" value = "Return" /></p>
+    </form>
+
+    {% endblock %}
+
+  </div>
+</body>
+
+</html>

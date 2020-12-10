@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Rugby score prediction</title>
+  <link rel="stylesheet" href="/static/css/main.css">
+  <link rel="shortcut icon" href="/static/images/lstm.ico">
+
+</head>
+
+<body>
+  <div class="container">
+    <h1>
+      <center>Rugby score prediction using Machine Learning</center>
+    </h1>
+
+    {% block content %}
+    {% for message in form.team1.errors %}
+    <div class="flash">{{ message }}</div>
+    {% endfor %}
+
+    {% for message in form.team2.errors %}
+    <div class="flash">{{ message }}</div>
+    {% endfor %}
+
+    <form method=post>
+
+      {{ form.team1.label }}
+      {{ form.team1 }}
+
+      {{ form.team2.label }}
+      {{ form.team2 }}
+      <p></p>
+      {{ form.submit }}
+    </form>
+    {% endblock %}
+
+  </div>
+</body>
+
+</html>
